@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn{
+    @apply py-2 px-12 rounded-md;
+}
+.btn-sm{
+    @apply rounded px-2 py-1;
+}
+.logo{
+    @apply text-3xl font-bold text-center;
+}
+.date{
+    @apply w-5;
+}
+input{
+    @apply min-w-[270px] px-2 py-2 rounded border border-neutral-500 focus:outline-none focus:ring-1 focus:ring-red-700 bg-transparent;
+}
+.back-beige{
+    background-color: #f3c074;
+}
+
+
+
+
+
+
+
+
+/* app.css or your main stylesheet */
+
+.inventory-table {
+    width: 100%; /* Or a specific width if needed */
+    border-collapse: collapse; /* Essential for table styling */
+    overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+    display: block; /* Needed for sticky header */
+    max-height: 72vh; /* Set a maximum height for the table */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.inventory-table th {
+    background-color: #f3c074; /* Example header background color */
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1; /* Ensure header is above the content */
+    padding: 10px; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Add a bottom border */
+    white-space: nowrap; /* Prevent header text from wrapping */
+}
+
+.inventory-table td {
+    padding: 10px; /* Adjust padding as needed */
+    border-bottom: 1px solid #ddd; /* Add a bottom border */
+    white-space: nowrap; /* Prevent cell content from wrapping */
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
+}
+
+/* Optional: Add hover effect on rows */
+.inventory-table tr:hover {
+    background-color: #fae19d;
+    cursor: pointer;
+}
+
+/* Optional: Style the scrollbar */
+::-webkit-scrollbar {
+    width: 5px; /* Adjust scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-amber-100; /* Scrollbar track background */
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-amber-100 hover:bg-green-900 cursor-pointer; /* Scrollbar thumb color */
+    border-radius: 5px; /* Round the scrollbar thumb */
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+    .inventory-table {
+        font-size: 14px;
+    }
+
+    .inventory-table th,
+    .inventory-table td {
+        padding: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
